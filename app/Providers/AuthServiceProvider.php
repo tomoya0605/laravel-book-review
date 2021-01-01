@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 
+
 class AuthServiceProvider extends ServiceProvider
 {
     /**
@@ -14,6 +15,7 @@ class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         // 'App\Model' => 'App\Policies\ModelPolicy',
+         Review::class => Reviewpolicy::class,
     ];
 
     /**
@@ -27,4 +29,18 @@ class AuthServiceProvider extends ServiceProvider
 
         //
     }
+    
+    /**
+     * Determine whether the user can update the review.
+     *
+     * @param  \App\User  $user
+     * @param  \App\Review  $review
+     * @return mixed
+     */
+    public function delete(User $user, Article $review)
+    {
+        return $user->id === $review->user_id;
+    }
+    
+    
 }

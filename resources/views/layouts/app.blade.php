@@ -88,7 +88,7 @@
             @yield('content')
         </main>
         <footer class='footer p20'>
-          <small class='copyright'>Laravel Book Reviews 2019 copyright</small>
+          <small class='copyright'>Laravel Book Reviews 2020 copyright</small>
         </footer>
     </div>
 </body>

@@ -22,7 +22,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/review', 'ReviewController@create')->name('create');
     
     Route::post('/review/store', 'ReviewController@store')->name('store');
-
 });
 
+Route::delete('/{id}', 'ReviewController@delete')->where('id', '[0-9]+');
 Route::get('/home', 'HomeController@index')->name('home');
