@@ -24,13 +24,11 @@
       </aside>
     </div>
     <div class="text-center mb10">
-      @if (User::id() == $review['id'])
       <form action="/{{ $review->id }}" method="POST">
         @method('DELETE')
         @csrf
         <button class="btn btn-info btn-danger" type="submit" onclick="return confirm('削除します。よろしいですか？')">削除</button>
       </form>
-      @endif
     </div>
       <a href="{{ route('index') }}" class='btn btn-info btn-back mb20'>一覧へ戻る</a>
   </div>
