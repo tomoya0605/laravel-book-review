@@ -1,7 +1,7 @@
 ### 書籍レビューアプリ
 
 ## URL
-http://tomoya0605.tokyo/
+http://tomoya0605.tokyo
 
 
 ## usersテーブル
